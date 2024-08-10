@@ -2,7 +2,7 @@ import { Button, Card, CardContent, CardMedia, Container, Grid, Typography } fro
 import { pic } from '@/api/axios/axios';
 import Link from 'next/link';
 import { getChildcareDoctors, getDoctorByDepartment } from '@/hooks/customHooks/cmsQuery.hooks';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function index() {
 
