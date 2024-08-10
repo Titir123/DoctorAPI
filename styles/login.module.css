@@ -1,0 +1,21 @@
+.login_background{
+
+    background-image:url('/Images/international-worker-s-day-with-doctor-tools_23-2150269672.avif');
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    height:400px;
+   
+    
+}
+
+.register_background{
+
+    background-image:url('/Images/copy-space-heart-shape-stethoscope_23-2148519790.avif');
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    height:700px;
+
+    
+}

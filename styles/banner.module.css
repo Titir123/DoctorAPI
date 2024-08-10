@@ -1,0 +1,79 @@
+.banner_container {
+  overflow: hidden; 
+}
+.slide1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('/Images/47330720-group-of-hospital-doctors-health-care-banner-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height:500px;
+  width:100%;
+}
+.slide2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('/Images/heart-patient_693425-28088.avif');
+  background-size: cover;
+  background-position: center;
+  height:500px;
+  width:100%;
+}
+.slide3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('/Images/istockphoto-1416945140-612x612.jpg');
+  background-size: cover;
+  background-position: center;
+  height:500px;
+  width:100%;
+}
+
+
+.slide_content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(111, 206, 233);
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* .slide_content h2 {
+  color: white;
+  font-size: "150px";
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+} */
+
+@media (max-width: 768px) {
+  .banner-container {
+    height: 300px; 
+  }
+
+  .slide-content {
+    font-size:2 rem; 
+  }
+  .slide{
+    background-size: contain;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner-container {
+    height: 200px; 
+  }
+
+  .slide-content {
+    font-size: 0.5 rem; 
+  }
+}
