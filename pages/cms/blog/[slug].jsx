@@ -1,4 +1,4 @@
-'use-client'
+"use-client";
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { getBlogComment, getBlogDetails, useCreatecomment } from '@/hooks/customHooks/cmsQuery.hooks';

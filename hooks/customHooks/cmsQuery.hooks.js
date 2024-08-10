@@ -208,10 +208,8 @@ export const getBlogSearch = (id) => {
       queryClient.invalidateQueries({ queryKey: ["blogSearch"] });
     },
     enabled: !!id,
-     staleTime: 3000,
-     cacheTime: 6000,
     onError: (error) => {
-      console.error(error);
+      toast.error(error.response.data?.message);
     },
   });
 };

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import { Container, Grid, Card, CardMedia, CardContent, Typography, Pagination, Box, Button } from '@mui/material';
 import { getBlogSearch } from '@/hooks/customHooks/cmsQuery.hooks';
@@ -13,8 +14,8 @@ export default function index() {
   
     if (isLoading) return <p>Loading...</p>;
     if (isError) 
-   //return <p>Error loading products</p>;
-console.log(error);
+   return <p>Error loading products</p>;
+
 
     return (
         <>
@@ -23,7 +24,7 @@ console.log(error);
 <Typography sx={{display:"flex",alignItems:"center", justifyContent:"center",fontFamily:"fantasy", variant:"h2", fontSize:"20px", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
     Blog Post
   </Typography>
-
+{(data != []) ? 
       <Grid container spacing={4}>
           {data?.map(blog => (
             <Grid item key={blog._id} xs={12} sm={6} md={6}>
@@ -45,7 +46,9 @@ console.log(error);
             </Grid>
           )
         )}
-      </Grid>
+      </Grid> :
+      <h3>keyword doesnot match with any blog posts</h3>
+      }
     </Container>
     <br /> <br />
         </>
