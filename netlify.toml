@@ -1,8 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = ".next"  # For Next.js or "out" if using "next export"
-
-  [[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
