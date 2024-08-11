@@ -12,6 +12,7 @@ export const authSlice = createSlice({
       cookies.remove("token", { path: "/" });
       cookies.remove("name", { path: "/" });
       cookies.remove("_id", { path: "/" });
+      cookies.remove("email", { path: "/" });
       console.log("Logout action called, cookies removed");
       
     },

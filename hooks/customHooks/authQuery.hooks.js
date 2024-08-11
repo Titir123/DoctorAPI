@@ -25,8 +25,8 @@ export const useSignInMutation = () => {
       if (status === 200) {
         cookies.set("token", token, {
           path: "/",
-          sameSite: "None",
-          secure: true,
+          // sameSite: "None",
+          // secure: true,
         });
         cookies.set("name", name, { path: "/" });
         cookies.set("_id", _id, { path: "/" });
