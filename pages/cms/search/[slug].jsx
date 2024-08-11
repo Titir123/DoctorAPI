@@ -4,7 +4,7 @@ import { Container, Grid, Card, CardMedia, CardContent, Typography, Pagination, 
 import { getBlogSearch } from '@/hooks/customHooks/cmsQuery.hooks';
 import Link from 'next/link';
 import { pic } from '@/api/axios/axios';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export default function index() {
 
@@ -24,7 +24,7 @@ export default function index() {
 <Typography sx={{display:"flex",alignItems:"center", justifyContent:"center",fontFamily:"fantasy", variant:"h2", fontSize:"20px", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
     Blog Post
   </Typography>
-{(data != []) ? 
+{(data !== null) ? 
       <Grid container spacing={4}>
           {data?.map(blog => (
             <Grid item key={blog._id} xs={12} sm={6} md={6}>

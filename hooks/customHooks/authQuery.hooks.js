@@ -5,7 +5,7 @@ import { login } from "@/api/functions/login.api";
 import { register } from "@/api/functions/register.api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export const useSignInMutation = () => {
   const cookies = new Cookies();

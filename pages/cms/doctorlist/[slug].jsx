@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Card, CardContent, CardMedia, Container,Grid,Typography } from '@mui/material';
 import { DetailsQuery } from '@/hooks/customHooks/cmsQuery.hooks';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { pic } from '@/api/axios/axios';
 import Appointment from '../../cms/appointment'
 import { blueGrey } from '@mui/material/colors';

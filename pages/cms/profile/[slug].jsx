@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Card, CardContent, CardMedia, Container,Grid,Typography } from '@mui/material';
 import { getDashboardDetails } from '@/hooks/customHooks/cmsQuery.hooks';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { pic } from '@/api/axios/axios';
 import { Cookies } from 'react-cookie';
 
