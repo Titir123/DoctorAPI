@@ -24,11 +24,8 @@ export default function index() {
 <Typography sx={{display:"flex",alignItems:"center", justifyContent:"center",fontFamily:"fantasy", variant:"h2", fontSize:"20px", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
     Blog Post
   </Typography>
-<<<<<<< HEAD
 {(data !== null) ? 
-=======
-{(data != null) ? 
->>>>>>> ea2fb60325d2cf6477cf7071e8d5d097dfcf5cf3
+
       <Grid container spacing={4}>
           {data?.map(blog => (
             <Grid item key={blog._id} xs={12} sm={6} md={6}>
