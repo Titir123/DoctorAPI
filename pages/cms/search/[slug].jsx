@@ -4,7 +4,7 @@ import { Container, Grid, Card, CardMedia, CardContent, Typography, Pagination, 
 import { getBlogSearch } from '@/hooks/customHooks/cmsQuery.hooks';
 import Link from 'next/link';
 import { pic } from '@/api/axios/axios';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export default function index() {
 

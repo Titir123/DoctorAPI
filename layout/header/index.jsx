@@ -12,7 +12,7 @@ import Menu from '@mui/material/Menu';
 import Link from 'next/link';
 import { Cookies } from 'react-cookie';
 import { useDispatch } from 'react-redux';
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { logout } from '@/toolkit/authSlice';
 import { Tooltip } from '@mui/material';
 import Image from 'next/image';

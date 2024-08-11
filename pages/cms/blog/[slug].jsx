@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { getBlogComment, getBlogDetails, useCreatecomment } from '@/hooks/customHooks/cmsQuery.hooks';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { Container, Typography, Box, Grid, Paper, TextField, Button } from '@mui/material';
 import { pic } from '@/api/axios/axios';
 import { Cookies } from 'react-cookie';
