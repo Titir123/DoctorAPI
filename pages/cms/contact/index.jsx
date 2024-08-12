@@ -34,7 +34,7 @@ export default function index() {
         <Container>
           <Grid container spacing={3} justifyContent="center">
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ minWidth: 200, margin: '20px', backgroundColor:"ButtonHighlight"}}>
+              <Card sx={{ minWidth: 200, margin: '20px', backgroundColor:"darkblue"}}>
                 <CardContent sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
                   <Box display="flex" justifyContent="center" alignItems="center" mb={2}
                     sx={{
@@ -48,14 +48,14 @@ export default function index() {
                     }}>
                     <HomeIcon fontSize="large" />
                   </Box>
-                  <Typography variant="body2" color="text.secondary" align="center">
+                  <Typography variant="body2" color="skyblue" align="center">
                     Beleghata, Kolkata
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ minWidth: 200, margin: '20px', backgroundColor: "ButtonHighlight" }}>
+              <Card sx={{ minWidth: 200, margin: '20px', backgroundColor: "darkblue" }}>
                 <CardContent sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
                   <Box display="flex" justifyContent="center" alignItems="center" mb={2}
                     sx={{
@@ -69,14 +69,14 @@ export default function index() {
                     }}>
                     <PhoneIcon fontSize="large" />
                   </Box>
-                  <Typography variant="body2" color="text.secondary" align="center">
+                  <Typography variant="body2" color="skyblue" align="center">
                     +123-456-7890
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card sx={{ minWidth: 200, margin: '20px', backgroundColor: "ButtonHighlight" }}>
+              <Card sx={{ minWidth: 200, margin: '20px', backgroundColor: "darkblue" }}>
                 <CardContent sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
                   <Box display="flex" justifyContent="center" alignItems="center" mb={2} sx={{
                     borderRadius: '50%',
@@ -89,7 +89,7 @@ export default function index() {
                   }}>
                     <EmailIcon fontSize="large" />
                   </Box>
-                  <Typography variant="body2" color="text.secondary" align="center">
+                  <Typography variant="body2" color="skyblue" align="center">
                     medifacility@medinest.com
                   </Typography>
                 </CardContent>

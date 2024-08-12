@@ -13,7 +13,7 @@ export const useSignInMutation = () => {
   const { queryClient } = useGlobalHooks();
 
   return useMutation({
-    mutationFn: login, 
+    mutationFn: login,
     onSuccess: (response) => {
       const {
         token,
@@ -25,14 +25,14 @@ export const useSignInMutation = () => {
       if (status === 200) {
         cookies.set("token", token, {
           path: "/",
-          // sameSite: "None",
-          // secure: true,
+          sameSite: "None",
+          secure: true,
         });
         cookies.set("name", name, { path: "/" });
         cookies.set("_id", _id, { path: "/" });
         cookies.set("email", email, { path: "/" });
         toast.success(message);
-        router.push("/");
+        router.push('/');
       } else {
         toast.error(message);
       }
@@ -40,11 +40,12 @@ export const useSignInMutation = () => {
       queryClient.invalidateQueries(["USERS"]);
     },
     onError: (error) => {
-      toast.error("an error occured");
+      const errorMessage = error?.response?.data?.message || "An error occurred";
+      toast.error(errorMessage);
       console.error(error);
     },
   });
-};
+}
 
 export const useSignUpMutation = () => {
   const cookie = new Cookies();

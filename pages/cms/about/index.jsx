@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, styled, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, CardMedia, Container, Grid, styled, Typography } from '@mui/material'
 import React from 'react'
 import Doctorlist from "../../cms/doctorlist";
 import Department from "../../cms/department";
@@ -48,7 +48,7 @@ export default function index() {
           ABOUT US
          </Typography>
         <br/>
-        <Typography variant="h3" sx={{fontFamily:"fantasy"}} gutterBottom>
+        <Typography variant="h3" sx={{fontFamily:"fantasy", color:"darkblue"}} gutterBottom>
          BEST MEDICAL CARE FOR YOURSELF AND YOUR FAMILY
         </Typography>
         <Typography variant="body1" paragraph>
@@ -58,6 +58,10 @@ export default function index() {
         <Link href ='/cms/featured'>
         <PillButton sx={{borderColor:"skyblue", borderRadius:"20px", color:"skyblue"}} variant="outlined">
          Featured Doctors
+        </PillButton></Link>
+        <Link href ='/cms/famous'>
+        <PillButton sx={{borderColor:"skyblue", borderRadius:"20px", color:"skyblue"}} variant="outlined">
+         Famous Departments
         </PillButton></Link>
         </BannerButtons>
       </Grid>
@@ -69,12 +73,60 @@ export default function index() {
     </Box>
 
    
+    <Container maxWidth="lg" sx={{ my: 4 }}>
+      <Typography variant="h4" align="center" gutterBottom fontFamily="fantasy" color="darkblue">
+        Our Mission & Vision
+      </Typography>
+      <Grid container spacing={4}>
+      <Box className="gap" sx={{height:"50px", width:"100%"}}>
+      </Box>
+        {/* Mission Section */}
+        <Grid item xs={12} md={6}>
+          <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <CardMedia
+              component="img"
+              height="200"
+              image="/Images/images (2).jpeg"
+              alt="Our Mission"
+            />
+            <CardContent>
+              <Typography variant="h5" gutterBottom>
+                Our Mission
+              </Typography>
+              <Typography variant="body1">
+                Our mission is to provide top-quality medical services, ensuring that every patient receives personalized and comprehensive care through innovative technology and compassionate professionals.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
 
+        {/* Vision Section */}
+        <Grid item xs={12} md={6}>
+          <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <CardMedia
+              component="img"
+              height="200"
+              image="/Images/download.jpeg"
+              alt="Our Vision"
+            />
+            <CardContent>
+              <Typography variant="h5" gutterBottom>
+                Our Vision
+              </Typography>
+              <Typography variant="body1">
+                Our vision is to revolutionize healthcare by leveraging cutting-edge technology, making it accessible to everyone, and setting new standards in patient care and wellness management.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+
+      </Grid>
+    </Container>
    
 
-    <Department/>
+    {/* <Department/>
 
-    <Doctorlist/>
+    <Doctorlist/> */}
 
     </>
   )

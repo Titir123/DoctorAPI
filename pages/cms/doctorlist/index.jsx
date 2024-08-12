@@ -55,7 +55,7 @@ export default function index() {
     <>
 
 <Typography sx={{display:"flex",alignItems:"center", justifyContent:"center", variant:"h2", fontSize:"20px",fontFamily:"fantasy", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
-  Doctors
+  OUR TEAM
   </Typography>
   <Typography style={{textAlign:"center", variant:"h3", fontSize:"50px", marginTop:"10px",fontFamily:"fantasy", color:"darkblue"}}>
 Qualified Healthcare <br/> Professionals
@@ -69,7 +69,7 @@ Qualified Healthcare <br/> Professionals
      
           {data?.map((doctor) => (
             <div key={doctor._id}>
-              <Card sx={{ margin : "10px", height:"500px" }}>
+              <Card sx={{ margin : "10px", height:"450px" }}>
           
              
                 <CardMedia
@@ -89,10 +89,11 @@ Qualified Healthcare <br/> Professionals
                   <Typography variant="body2" color="text.secondary">
                     Availability: {doctor.aperture_time} - {doctor.departure_time}
                   </Typography>
+                  <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">Make Apointment</Button></Link>
                 </CardContent>
                 
                 
-                <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">Make Apointment</Button></Link>
+               
               </Card>
           </div>
                ))

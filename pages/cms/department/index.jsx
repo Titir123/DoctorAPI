@@ -41,8 +41,9 @@ Select Department-wise <br /> Doctors
                   <Typography variant="h6" component="div">
                     {department.departmentName}
                   </Typography>
+                  <Link style={{textDecoration:"none"}} href={`/cms/DocbyDept/${department._id}`}><Button variant='contained' color="success">Vist doctor</Button></Link>
                 </CardContent>
-                <Link style={{textDecoration:"none"}} href={`/cms/DocbyDept/${department._id}`}><Button variant='contained' color="success">Vist doctor</Button></Link>
+               
                
               </Card>
             </Grid>

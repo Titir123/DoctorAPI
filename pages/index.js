@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 // import styles from "@/styles/Home.module.css";
 import styles from '../styles/banner.module.css';
-import About from "./cms/about";
-import CreateContact from "./cms/contact"
+import Department from "./cms/department";
+import Doctorlist from "./cms/doctorlist"
 import Blog from "./cms/blog";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -59,11 +59,47 @@ export default function Home() {
       </Slider>
     </div>
 
-    <About/>
+    <Container maxWidth="lg">
+    <Grid container spacing={3}>
+    <Grid item xs={12} md={6}>
+      <Box className="gap" sx={{height:"100px", width:"100%"}}>
+</Box>
+        <img
+          src="/Images/hero.jpg"
+          alt="Team"
+          style={{ width: '100%', height: '350px' }}
+        />
+      </Grid>
+   
+   
 
-    <Blog/>
 
-    <CreateContact/>
+      {/* Left Side Content */}
+      <Grid item xs={12} md={6}>
+      <Box className="gap" sx={{height:"100px", width:"100%"}}>
+      </Box>
+        <Typography variant="h4" gutterBottom sx={{fontSize:"40px",fontFamily:"fantasy", color:"darkblue"}}>
+          We Provide Top Medical Facilities  <br /> in the City
+        </Typography>
+        <Typography variant="body1" paragraph>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+        </Typography>
+        <Button sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
+          Read More
+        </Button>
+      
+      </Grid>
+      </Grid>
+
+      {/* Right Side Image */}
+      
+   
+    </Container>
+
+   <Department/>
+
+   <Doctorlist/>
+
     </>
   );
 }

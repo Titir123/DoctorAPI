@@ -117,8 +117,8 @@ export const getRecentBlog = () => {
       queryClient.invalidateQueries({ queryKey: ["recent"] })
 
     },
-    staleTime: 3000,
-    cacheTime:6000
+    //staleTime: 3000,
+    //cacheTime:6000
 
   }
   )
@@ -177,8 +177,8 @@ export const getBloglist = (page, perPage) => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["blog"] })
     },
-    staleTime: 3000,
-    cacheTime: 6000,
+    //staleTime: 3000,
+    //cacheTime: 6000,
   });
 
 };
@@ -256,10 +256,6 @@ export const useCreatecomment = () => {
         toast.success(message);
 
       }
-      // else {
-      //   router.push("/auth/login");
-      //   toast.error(message);
-      // }
       queryClient.invalidateQueries(["comment"]);
     },
     onError: (error) => {
