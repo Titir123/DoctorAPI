@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/auth/login"
+  to = "/"
+  status = 200
+
+  [[redirects]]
+  from = "/auth/logout"
+  to = "/auth/login"
+  status = 200

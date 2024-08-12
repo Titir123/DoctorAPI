@@ -33,7 +33,7 @@ export const useSignInMutation = () => {
         cookies.set("_id", _id, { path: "/" });
         cookies.set("email", email, { path: "/" });
         toast.success(message);
-        redirect('/');
+        router.push('/');
       } else {
         toast.error(message);
       }
@@ -62,7 +62,7 @@ export const useSignUpMutation = () => {
       } = response || {};
       if (status === true) {
         toast(message, "success");
-        redirect("/auth/login");
+        routerRegister.push("/auth/login");
       } else {
         toast(message, "error");
       }
