@@ -6,6 +6,7 @@ import { register } from "@/api/functions/register.api";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
+import { redirect } from "next/navigation";
 
 export const useSignInMutation = () => {
   const cookies = new Cookies();
@@ -32,7 +33,7 @@ export const useSignInMutation = () => {
         cookies.set("_id", _id, { path: "/" });
         cookies.set("email", email, { path: "/" });
         toast.success(message);
-        router.push('/');
+        redirect('/');
       } else {
         toast.error(message);
       }
@@ -61,7 +62,7 @@ export const useSignUpMutation = () => {
       } = response || {};
       if (status === true) {
         toast(message, "success");
-        routerRegister.push("/auth/login");
+        redirect("/auth/login");
       } else {
         toast(message, "error");
       }
