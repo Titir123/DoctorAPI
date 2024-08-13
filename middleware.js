@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 export function middleware(request) {
   const token = request.cookies.get("token");
+
+  console.log("Middleware executed for:", request.url);
+  console.log("Token value:", token);
 
   if (!token) {
     console.log("Token not found");

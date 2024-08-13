@@ -6,6 +6,7 @@ const cookies = new Cookies();
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
+  
   },
   reducers: {
     logout(state, action) {

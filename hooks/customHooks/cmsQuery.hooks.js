@@ -88,8 +88,8 @@ export const getDashboardDetails = (id) => {
       queryClient.invalidateQueries({ queryKey: ["Dashboard"] });
     },
     enabled: !!id,
-    // staleTime: 3000, 
-    // cacheTime: 6000, 
+     staleTime: 3000, 
+     cacheTime: 6000, 
   });
 };
 
@@ -117,8 +117,8 @@ export const getRecentBlog = () => {
       queryClient.invalidateQueries({ queryKey: ["recent"] })
 
     },
-    //staleTime: 3000,
-    //cacheTime:6000
+    staleTime: 3000,
+    cacheTime:6000
 
   }
   )
@@ -135,8 +135,8 @@ export const getBlogComment = (id) => {
 
     },
     enabled:!!!id,
-    // staleTime: 3000,
-    // cacheTime:6000
+    staleTime: 3000,
+    cacheTime:6000
   }
   )
 };
@@ -177,8 +177,8 @@ export const getBloglist = (page, perPage) => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["blog"] })
     },
-    //staleTime: 3000,
-    //cacheTime: 6000,
+    staleTime: 3000,
+    cacheTime: 6000,
   });
 
 };
@@ -193,8 +193,8 @@ export const getBlogDetails = (id) => {
       queryClient.invalidateQueries({ queryKey: ["blogDetail"] });
     },
     enabled: !!id,
-    // staleTime: 3000,
-    // cacheTime: 6000,
+    staleTime: 3000,
+    cacheTime: 6000,
   });
 };
 

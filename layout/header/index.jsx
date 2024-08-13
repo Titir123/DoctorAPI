@@ -55,7 +55,7 @@ export default function Header() {
 
   const handleLogout = () => {
     dispatch(logout());
-    router.push("/");
+    router.push("/auth/login");
   }
 
   useEffect(() => {
@@ -220,7 +220,6 @@ export default function Header() {
             >
               {settings?.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  {console.log(setting, "setting")}
                   <Typography textAlign="center">
                     {" "}
                     <Link

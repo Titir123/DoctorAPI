@@ -4,7 +4,6 @@ import { DetailsQuery } from '@/hooks/customHooks/cmsQuery.hooks';
 import { useRouter } from 'next/router';
 import { pic } from '@/api/axios/axios';
 import Appointment from '../../cms/appointment'
-import { blueGrey } from '@mui/material/colors';
 
 export default function index() {
     const router = useRouter();
