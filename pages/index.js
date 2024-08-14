@@ -1,105 +1,120 @@
-import Head from "next/head";
-import React from "react";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-// import styles from "@/styles/Home.module.css";
-import styles from '../styles/banner.module.css';
-import Department from "./cms/department";
-import Doctorlist from "./cms/doctorlist"
-import Blog from "./cms/blog";
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/system';
-import { Container, Grid } from "@mui/material";
+import { AppBar, Box, Button, Container, Grid, IconButton, Toolbar, Typography } from "@mui/material";
+import { Facebook, Twitter, Instagram, LinkedIn} from '@mui/icons-material';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import Link from "next/link";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay:true,
-    autoPlayspeed:1300,
-    cssEase:"Linear",
-  };
-
-  
   return (
     <>
-         <div className={styles.banner_container}>
-      <Slider {...settings}>
-      
-          <div className={styles.slide1}>
-            <div className={styles.slide_content}>
-              <h2 className={styles.slide_content}>RENOWNED DOCTORS</h2>
-            </div>
-          </div>
+    <AppBar position="static">
+      <Toolbar>
+        {/* Left Image */}
+        <IconButton sx={{ padding: 0, fontSize: { xs: 'inherit', md: 'inherit' }, display: { md: 'flex' } }}>
+        <MedicalServicesIcon/>
+        </IconButton>
 
-          <div className={styles.slide2}>
-            <div className={styles.slide_content}>
-              <h2 className={styles.slide_content}>EXCELLENT FACILITIES</h2>
-            </div>
-          </div>
+        {/* Center Title */}
+        <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
+          <Typography variant="h6" component="div" sx={{fontFamily:"fantasy", color:"white"}}>
+            Clickshop
+          </Typography>
+          
+        </Box>
 
-          <div className={styles.slide3}>
-            <div className={styles.slide_content}>
-              <h2 className={styles.slide_content}>CARE BASED ETHICS</h2>
-            </div>
-          </div>
-       
-      </Slider>
-    </div>
+        {/* Right Button */}
+        
+        <Link href="/auth/register"><Button variant="outlined" sx={{backgroundColor:"darkblue", color:"white"}}>Signup</Button></Link>
+      </Toolbar>
+    </AppBar>
+    <Box
+      sx={{
+        width: '100%',
+        height: '100vh',
+        backgroundImage: `url(/Images/laboratory-563423_640.jpg)`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        color: '#fff', // Adjust text color as needed
+      }}
+    >
+      <Typography variant="h2" component="h1" sx={{fontFamily:"fantasy", color:"skyblue"}}>
+        Welcome to Clickshop
+      </Typography>
+      <Typography variant="h6" component="div" sx={{fontFamily:"fantasy", color:"darkblue"}}>
+            Best solution to all your daily needs
+          </Typography>
+      <Link href="/auth/login"><Button 
+        variant="contained" 
+        color="primary" 
+        sx={{ mt: 3 }}
+      >
+        Get Started
+      </Button></Link>
+    </Box>
 
-    <Container maxWidth="lg">
-    <Grid container spacing={3}>
-    <Grid item xs={12} md={6}>
-      <Box className="gap" sx={{height:"100px", width:"100%"}}>
-</Box>
-        <img
-          src="/Images/hero.jpg"
-          alt="Team"
-          style={{ width: '100%', height: '350px' }}
-        />
-      </Grid>
-   
-   
-
-
-      {/* Left Side Content */}
-      <Grid item xs={12} md={6}>
-      <Box className="gap" sx={{height:"100px", width:"100%"}}>
-      </Box>
-        <Typography variant="h4" gutterBottom sx={{fontSize:"40px",fontFamily:"fantasy", color:"darkblue"}}>
-          We Provide Top Medical Facilities  <br /> in the City
-        </Typography>
-        <Typography variant="body1" paragraph>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-        </Typography>
-        <Button sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
-          Read More
-        </Button>
-      
-      </Grid>
-      </Grid>
-
-      {/* Right Side Image */}
-      
-   
-    </Container>
-
-   <Department/>
-
-   <Doctorlist/>
-
+    <footer>
+            
+            <Box sx={{ bgcolor: 'darkblue', color:"whitesmoke", p: 6}} component="footer">
+            <Container maxWidth="lg">
+                <Grid container spacing={4} justifyContent="space-between">
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Typography variant="h6" color="white" gutterBottom>
+                            Site Links
+                        </Typography>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Home
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            About
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Blogs
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Contact
+                        </Link>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Typography variant="h6" color="white" gutterBottom>
+                            Quick Links
+                        </Typography>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Contact Us
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Privacy Policy
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Terms and Conditions
+                        </Link>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Typography variant="h6" color="white" gutterBottom>
+                            Follow Us
+                        </Typography>
+                        <IconButton href="#" color="inherit">
+                            <Facebook />
+                        </IconButton>
+                        <IconButton href="#" color="inherit">
+                            <Twitter />
+                        </IconButton>
+                        <IconButton href="#" color="inherit">
+                            <Instagram />
+                        </IconButton>
+                        <IconButton href="#" color="inherit">
+                            <LinkedIn />
+                        </IconButton>
+                    </Grid>
+                </Grid>
+               
+            </Container>
+        </Box>
+        </footer>
     </>
   );
 }

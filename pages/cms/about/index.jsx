@@ -1,7 +1,7 @@
 import { Box, Button, Card, CardContent, CardMedia, Container, Grid, styled, Typography } from '@mui/material'
 import React from 'react'
-import Doctorlist from "../../cms/doctorlist";
-import Department from "../../cms/department";
+import Doctorlist from "../doctorlist";
+import Department from "../department";
 import Link from 'next/link';
 
 export default function index() {

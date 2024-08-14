@@ -1,8 +1,11 @@
 import React from 'react'
-import { Typography, TextField, Button, Container, Grid, Paper, Box } from '@mui/material';
+import { Typography, TextField, Button, Container, Grid, Paper, Box, AppBar, Toolbar, IconButton } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useSignInMutation } from '@/hooks/customHooks/authQuery.hooks';
 import styles from '../../../styles/login.module.css';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import Link from 'next/link';
+import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 
 export default function index() {
 
@@ -17,6 +20,24 @@ export default function index() {
   const onSubmit = (data) => mutate(data);
   return (
     <>
+    <AppBar position="static" >
+      <Toolbar>
+       
+      <IconButton sx={{ padding: 0, fontSize: { xs: 'inherit', md: 'inherit' }, display: {  md: 'flex' } }}>
+        <MedicalServicesIcon/> 
+        </IconButton>
+
+        <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
+          <Typography variant="h6" component="div" sx={{fontFamily:"fantasy", color:"white"}}>
+            Medinest
+          </Typography>
+        </Box>
+
+        {/* Right Button */}
+
+        <Link href="/auth/register"><Button variant="outlined" sx={{backgroundColor:"darkblue", color:"white"}}>Signup</Button></Link>
+      </Toolbar>
+    </AppBar>
     <div className={styles.login_background}>
 <Container>
    <br /> <br />
@@ -87,6 +108,64 @@ export default function index() {
       <br /> <br />
     </Container>
     </div>
+    <footer>
+            
+            <Box sx={{ bgcolor: 'darkblue', color:"whitesmoke", p: 6}} component="footer">
+            <Container maxWidth="lg">
+                <Grid container spacing={4} justifyContent="space-between">
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Typography variant="h6" color="white" gutterBottom>
+                            Site Links
+                        </Typography>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Home
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            About
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Blogs
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Contact
+                        </Link>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Typography variant="h6" color="white" gutterBottom>
+                            Quick Links
+                        </Typography>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Contact Us
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Privacy Policy
+                        </Link>
+                        <Link href="#" variant="subtitle1" color="textSecondary" style={{textDecoration:"none",display:"block", color:"whitesmoke"}}>
+                            Terms and Conditions
+                        </Link>
+                    </Grid>
+                    <Grid item xs={12} sm={6} md={3}>
+                        <Typography variant="h6" color="white" gutterBottom>
+                            Follow Us
+                        </Typography>
+                        <IconButton href="#" color="inherit">
+                            <Facebook />
+                        </IconButton>
+                        <IconButton href="#" color="inherit">
+                            <Twitter />
+                        </IconButton>
+                        <IconButton href="#" color="inherit">
+                            <Instagram />
+                        </IconButton>
+                        <IconButton href="#" color="inherit">
+                            <LinkedIn />
+                        </IconButton>
+                    </Grid>
+                </Grid>
+               
+            </Container>
+        </Box>
+        </footer>
     </>
   )
 }

@@ -33,7 +33,7 @@ export const useSignInMutation = () => {
         cookies.set("_id", _id, { path: "/" });
         cookies.set("email", email, { path: "/" });
         toast.success(message);
-        router.push('/');
+        router.push('/cms/home');
       } else {
         toast.error(message);
       }

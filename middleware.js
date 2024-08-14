@@ -8,7 +8,7 @@ export function middleware(request) {
 
   if (!token) {
     console.log("Token not found");
-    return NextResponse.redirect(new URL("/auth/login", request.url));
+    return NextResponse.redirect(new URL("/", request.url));
   }
 
   console.log("Token found, proceeding to next response");
@@ -16,5 +16,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/cms/:path*", "/"],
+  matcher: ["/cms/appointment", "/cms/blog/[slug]"],
 };

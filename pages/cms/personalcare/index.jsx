@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import { pic } from '@/api/axios/axios';
 import Link from 'next/link';
 import { getPersonalcareDoctors } from '@/hooks/customHooks/cmsQuery.hooks';
@@ -35,6 +35,7 @@ return <p>Error loading products</p>;
                   <Typography variant="body2" color="text.secondary">
                     Availability: {doctor.aperture_time} - {doctor.departure_time}
                   </Typography>
+                  <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">Make Apointment</Button></Link>
                 </CardContent>
                 </Link>
               </Card>
