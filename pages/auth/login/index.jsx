@@ -3,7 +3,6 @@ import { Typography, TextField, Button, Container, Grid, Paper, Box, AppBar, Too
 import { useForm } from 'react-hook-form';
 import { useSignInMutation } from '@/hooks/customHooks/authQuery.hooks';
 import styles from '../../../styles/login.module.css';
-import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 
@@ -23,9 +22,10 @@ export default function index() {
     <AppBar position="static" >
       <Toolbar>
        
-      <IconButton sx={{ padding: 0, fontSize: { xs: 'inherit', md: 'inherit' }, display: {  md: 'flex' } }}>
-        <MedicalServicesIcon/> 
-        </IconButton>
+      <img
+         src="/Images/4228730.png"
+         style={{display:{md:'flex'}, width:"30px", height:"30px", padding:0}}
+        />
 
         <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
           <Typography variant="h6" component="div" sx={{fontFamily:"fantasy", color:"white"}}>

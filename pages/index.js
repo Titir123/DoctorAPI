@@ -1,6 +1,5 @@
 import { AppBar, Box, Button, Container, Grid, IconButton, Toolbar, Typography } from "@mui/material";
-import { Facebook, Twitter, Instagram, LinkedIn} from '@mui/icons-material';
-import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import { Facebook, Twitter, Instagram, LinkedIn, Padding} from '@mui/icons-material';
 import Link from "next/link";
 
 export default function Home() {
@@ -8,15 +7,16 @@ export default function Home() {
     <>
     <AppBar position="static">
       <Toolbar>
-        {/* Left Image */}
-        <IconButton sx={{ padding: 0, fontSize: { xs: 'inherit', md: 'inherit' }, display: { md: 'flex' } }}>
-        <MedicalServicesIcon/>
-        </IconButton>
+       
+        <img
+         src="/Images/4228730.png"
+         style={{display:{md:'flex'}, width:"30px", height:"30px", padding:0}}
+        />
 
         {/* Center Title */}
         <Box sx={{ flexGrow: 1, textAlign: 'center' }}>
           <Typography variant="h6" component="div" sx={{fontFamily:"fantasy", color:"white"}}>
-            Clickshop
+            Medinest
           </Typography>
           
         </Box>
@@ -43,10 +43,10 @@ export default function Home() {
       }}
     >
       <Typography variant="h2" component="h1" sx={{fontFamily:"fantasy", color:"skyblue"}}>
-        Welcome to Clickshop
+        Welcome to Medinest
       </Typography>
       <Typography variant="h6" component="div" sx={{fontFamily:"fantasy", color:"darkblue"}}>
-            Best solution to all your daily needs
+   Explore best medical facilities of the city
           </Typography>
       <Link href="/auth/login"><Button 
         variant="contained" 
