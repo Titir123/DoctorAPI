@@ -1,4 +1,4 @@
-import Wrapper from "@/layout/wrapper/Wrapper";
+import Wrapper from "@/layout/wrapper/wrapper";
 import "@/styles/globals.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from 'react-toastify';
