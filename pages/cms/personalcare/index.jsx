@@ -14,9 +14,11 @@ return <p>Error loading products</p>;
   return (
     <>
       <Container>
+        <br />
       <Typography variant="h4" gutterBottom>
         ChildCare Doctors
       </Typography>
+       <br />
       <Grid container spacing={4}>
           {data?.map((doctor) => (
             <Grid item key={doctor._id} xs={12} sm={6} md={4}>
@@ -35,7 +37,7 @@ return <p>Error loading products</p>;
                   <Typography variant="body2" color="text.secondary">
                     Availability: {doctor.aperture_time} - {doctor.departure_time}
                   </Typography>
-                  <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">Make Apointment</Button></Link>
+                  <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">View Details</Button></Link>
                 </CardContent>
                 </Link>
               </Card>

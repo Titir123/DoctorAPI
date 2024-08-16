@@ -18,15 +18,16 @@ export default function index() {
 
   return (
     <>
-
       <Container>
+        <br />
         <Typography variant="h4" gutterBottom>
           Recent Blogs
         </Typography>
+        <br />
         <Grid container spacing={2}>
 
           {blogs?.map(blog => (
-            <Grid item key={blog._id} xs={12} sm={12} md={12}>
+            <Grid item key={blog._id} xs={12} sm={6} md={6}>
               <Card sx={{ height: "380px" }}>
                 <Link style={{ textDecoration: "none" }} href={`/cms/blog/${blog._id}`}>
                   <CardMedia
@@ -46,6 +47,7 @@ export default function index() {
           ))
           }
         </Grid>
+        <br />
       </Container>
     </>
   )

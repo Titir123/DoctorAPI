@@ -16,7 +16,6 @@ import { useRouter } from "next/router";
 import { logout } from '@/toolkit/authSlice';
 import Image from 'next/image';
 import LogoutIcon from '@mui/icons-material/Logout';
-import MedicalServicesIcon from '@mui/icons-material/ShoppingCart';
 import img from '../../public/Images/download.png'
 
 const pages = ['Home', 'About', 'Blog', 'Contact'];
@@ -116,9 +115,12 @@ export default function Header() {
 
       {/* Icon and Clickshop (Left for larger screens) */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexGrow: 1 }}>
-        <IconButton sx={{ padding: 0, fontSize: { xs: 'inherit', md: 'inherit' }, display: { xs: 'none', md: 'flex' } }}>
-        <MedicalServicesIcon/> 
-        </IconButton>
+         <Box
+         component="img"
+    src="/Images/4228730.png"
+    alt="Medical Icon"
+    sx={{ display: { xs: 'none', md: 'block'}, width: "30px", height: "30px", padding: 0  }}
+  />
         <Typography
           variant="h5"
           sx={{

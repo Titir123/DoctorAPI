@@ -42,7 +42,7 @@ return <p>Error loading products</p>;
                     Availability: {doctor.aperture_time} - {doctor.departure_time}
                   </Typography>
                 </CardContent>
-                <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">Make Apointment</Button></Link>
+                <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">View Details</Button></Link>
               
               </Card>
             </Grid>

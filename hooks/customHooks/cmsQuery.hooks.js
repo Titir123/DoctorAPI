@@ -230,7 +230,7 @@ export const useAppointment = () => {
       else 
       {
         toast.error(message);
-        router.push("/");
+        router.push("/cms/home");
       }
       queryClient.invalidateQueries(["Appointment"]);
     },

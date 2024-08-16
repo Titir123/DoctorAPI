@@ -28,7 +28,7 @@ export default function index() {
 
       <Grid container spacing={4}>
           {data?.map(blog => (
-            <Grid item key={blog._id} xs={12} sm={6} md={6}>
+            <Grid item key={blog._id} xs={12} sm={12} md={12}>
               <Card sx={{ height:"380px"}}>
               <Link style={{textDecoration:"none"}} href={`/cms/blog/${blog._id}`}>
                 <CardMedia

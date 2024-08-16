@@ -3,9 +3,12 @@ import { Typography, TextField, Button, Container, Grid, Paper, FormControl, Inp
 import { useForm } from 'react-hook-form';
 import { DepartmentQuery, getDoctorByDepartment, useAppointment } from '@/hooks/customHooks/cmsQuery.hooks';
 import { Cookies } from 'react-cookie';
+import { useRouter } from 'next/router';
 
-export default function index({dept_id, doc_id}) {
+export default function index() {
     const cookie = new Cookies();
+    const router = useRouter();
+  const { dept_id, doc_id } = router.query;
 
     const {
         register,
@@ -23,17 +26,17 @@ export default function index({dept_id, doc_id}) {
     }
     return (
         <>
-            <div style={{
-                width: "100%", height: "350px",
+            {/* <div style={{
+                width: "100%", height: "450px",
                 backgroundColor:"skyblue"
-            }}>
+            }}> */}
                 <Container >
                     <br /> <br />
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6} sx={{ margin: "0 auto" }}>
                             <Paper elevation={3} sx={{ padding: 2 }}>
                                 <Typography variant="h5" gutterBottom>
-                                    Appointment
+                                    Submit
                                 </Typography>
                                 <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -66,7 +69,7 @@ export default function index({dept_id, doc_id}) {
                     </Grid>
                     <br /> <br />
                 </Container>
-            </div>
+            {/* </div> */}
             <br /> <br />
         </>
     )

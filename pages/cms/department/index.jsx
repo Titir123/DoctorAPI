@@ -18,7 +18,7 @@ return <p>Error loading departments</p>;
   return (
     <>
       <Container>
-      <Typography sx={{display:"flex",alignItems:"center", justifyContent:"center", variant:"h2", fontSize:"30px",fontFamily:"fantasy", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
+      <Typography sx={{display:"flex",alignItems:"center", justifyContent:"center", variant:"h2", fontSize:"30px",fontFamily:"fantasy", marginTop:"50px", textDecorationLine:"underline", color:"blue", textDecorationColor:"slate"}}>
     DEPARTMENTS
   </Typography>
   <Typography style={{textAlign:"center", variant:"h2", fontSize:"40px",fontFamily:"fantasy", marginTop:"10px", color:"darkblue"}}>

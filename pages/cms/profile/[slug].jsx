@@ -42,9 +42,9 @@ export default function index() {
                 <Typography variant="h6">Email: {mail}</Typography>
             </Box>
 
-
-        <h3 style={{textAlign:"center", color:"skyblue", fontFamily:"fantasy"}}>Upcoming appointments</h3>
-       
+<br />
+        <h3 style={{textAlign:"center", color:"blue", fontFamily:"fantasy"}}>Upcoming appointments</h3>
+       <br />
          <Grid container spacing={4}>
           {data?.map((doctor) => (
             <Grid item key={doctor._id} xs={12} sm={6} md={4}>

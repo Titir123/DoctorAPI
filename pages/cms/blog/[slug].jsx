@@ -8,6 +8,7 @@ import { pic } from '@/api/axios/axios';
 import { Cookies } from 'react-cookie';
 import Recentblog from '../recentBlog';
 import { BorderAllOutlined } from '@mui/icons-material';
+import Link from 'next/link';
 
 export default function index() {
 
@@ -52,6 +53,8 @@ export default function index() {
     <>
       <Container>
         <br /> <br />
+        <Box sx={{display:"flex", alignItems:"center", justifyContent:"right"}}><Link href='/cms/recentBlog'><Button variant='contained' backgroundColor="darkblue">View Recent Blogs</Button></Link></Box>
+        <br />
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} sx={{ margin: "0 auto" }}>
             <Box key={blogs?._id} mb={5}>
@@ -92,27 +95,30 @@ export default function index() {
 
               <br /> <br />
             </Container>
-            <Typography variant="h6" sx={{ color: "skyblue", textDecorationLine: "underline", color: "skyblue", textDecorationColor: "slate" }} >
+            <Typography variant="h6" sx={{ color: "black", textDecorationLine: "underline", textDecorationColor: "slate" }} >
               COMMENTS
-            </Typography>
+            </Typography><br />
             {comment?.map(item =>
             (
               <div key={item?.id}>
                 <Box sx={{ display: "flex", alignItems: "center", justifyContent: "left" }}>
                   <img src="/Images/download.png" style={{ width: "35px", height: "35px", BorderAllOutlined, }} alt="" />
                   <h4 style={{ color: "blue" }}>{item?.user_id?.name} </h4>
-                  <h5 style={{ color: "grey" }}> : {item?.comment}</h5>
+                  <h5> : {item?.comment}</h5>
 
                 </Box>
-              </div>
+                <br />
+              </div> 
             ))
             }
           </Grid>
+          <br />
 
-          <Grid item xs={12} md={6} sx={{ margin: "0 auto" }}>
+          {/* <Grid item xs={12} md={6} sx={{ margin: "0 auto" }}>
             <Recentblog />
-          </Grid>
+          </Grid> */}
         </Grid>
+        <br />
       </Container>
     </>
   )

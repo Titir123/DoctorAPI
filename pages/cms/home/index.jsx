@@ -69,10 +69,6 @@ export default function Home() {
           style={{ width: '100%', height: '350px' }}
         />
       </Grid>
-   
-   
-
-
       {/* Left Side Content */}
       <Grid item xs={12} md={6}>
       <Box className="gap" sx={{height:"100px", width:"100%"}}>

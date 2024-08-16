@@ -56,11 +56,11 @@ export default function index() {
         </Typography>
         <BannerButtons>
         <Link href ='/cms/featured'>
-        <PillButton sx={{borderColor:"skyblue", borderRadius:"20px", color:"skyblue"}} variant="outlined">
+        <PillButton sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
          Featured Doctors
         </PillButton></Link>
         <Link href ='/cms/famous'>
-        <PillButton sx={{borderColor:"skyblue", borderRadius:"20px", color:"skyblue"}} variant="outlined">
+        <PillButton sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
          Famous Departments
         </PillButton></Link>
         </BannerButtons>

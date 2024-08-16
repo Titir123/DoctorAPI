@@ -21,7 +21,7 @@ export default function index() {
     dots: false,
     infinite: true,
     speed: 1000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay:true,
     autoPlayspeed:1000,
@@ -30,17 +30,26 @@ export default function index() {
       {
           breakpoint: 1024,
           settings: {
-              slidesToShow: 2,
+              slidesToShow: 3,
               slidesToScroll: 1,
               infinite: true,
               dots: false
           }
       },
       {
-          breakpoint: 600,
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+        }
+    },
+      {
+          breakpoint: 300,
           settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
           }
       }
   ]
@@ -54,7 +63,7 @@ export default function index() {
   return (
     <>
 
-<Typography sx={{display:"flex",alignItems:"center", justifyContent:"center", variant:"h2", fontSize:"20px",fontFamily:"fantasy", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
+<Typography sx={{display:"flex",alignItems:"center", justifyContent:"center", variant:"h2", fontSize:"20px",fontFamily:"fantasy", marginTop:"50px", textDecorationLine:"underline", color:"blue", textDecorationColor:"slate"}}>
   OUR TEAM
   </Typography>
   <Typography style={{textAlign:"center", variant:"h3", fontSize:"50px", marginTop:"10px",fontFamily:"fantasy", color:"darkblue"}}>
@@ -64,18 +73,13 @@ Qualified Healthcare <br/> Professionals
 
 </Box>
 <Container maxWidth="xl">
-
-      <Slider {...settings}>
-     
+      <Slider {...settings}>  
           {data?.map((doctor) => (
             <div key={doctor._id}>
-              <Card sx={{ margin : "10px", height:"450px" }}>
-          
-             
+              <Card sx={{ margin : "10px", height:"550px", width:"300px"}}>  
                 <CardMedia
                   component="img"
-                  height="300"
-                  
+                  height="400"
                   image={pic(doctor.image)}
                   alt={doctor.name}
                 />
@@ -89,16 +93,12 @@ Qualified Healthcare <br/> Professionals
                   <Typography variant="body2" color="text.secondary">
                     Availability: {doctor.aperture_time} - {doctor.departure_time}
                   </Typography>
-                  <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">Make Apointment</Button></Link>
-                </CardContent>
-                
-                
-               
+                  <Link style={{textDecoration:"none"}} href={`/cms/doctorlist/${doctor._id}`}><Button variant='contained' color="primary">View Details</Button></Link>
+                </CardContent>     
               </Card>
           </div>
                ))
-              }
-              
+              }           
       </Slider>
     </Container>  
     <br /> <br />

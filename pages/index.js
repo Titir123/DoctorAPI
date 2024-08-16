@@ -53,7 +53,7 @@ export default function Home() {
         color="primary" 
         sx={{ mt: 3 }}
       >
-        Get Started
+       LOGIN
       </Button></Link>
     </Box>
 

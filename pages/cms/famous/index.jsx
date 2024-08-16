@@ -57,7 +57,7 @@ export default function index() {
               <Typography variant="h5" gutterBottom>
                 Personal Care
               </Typography>
-              <Link style={{textDecoration:"none"}} href={`/cms/personalcare`}><Button variant='contained' color="success">Vist doctor</Button></Link>
+              <Link style={{textDecoration:"none"}} href={`/cms/personalcare`}><Button variant='contained' color="success">Visit doctor</Button></Link>
             </CardContent>
           </Card>
         </Grid>

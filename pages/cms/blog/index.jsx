@@ -38,7 +38,7 @@ export default function index() {
         <>
 <Container>
 
-<Typography sx={{display:"flex",alignItems:"center", justifyContent:"center",fontFamily:"fantasy", variant:"h2", fontSize:"20px", marginTop:"50px", textDecorationLine:"underline", color:"skyblue", textDecorationColor:"slate"}}>
+<Typography sx={{display:"flex",alignItems:"center", justifyContent:"center",fontFamily:"fantasy", variant:"h2", fontSize:"20px", marginTop:"50px", textDecorationLine:"underline", color:"blue", textDecorationColor:"slate"}}>
     Blog Post
   </Typography>
   <Typography style={{textAlign:"center", variant:"h3", fontSize:"50px", marginTop:"10px",fontFamily:"fantasy", color:"darkblue"}}>

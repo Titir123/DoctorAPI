@@ -20,7 +20,7 @@ export const useSignInMutation = () => {
         token,
         status,
         message,
-        data: { name, email, _id },
+        data: { name, email, _id, phone},
       } = response || {};
 
       if (status === 200) {
@@ -32,6 +32,7 @@ export const useSignInMutation = () => {
         cookies.set("name", name, { path: "/" });
         cookies.set("_id", _id, { path: "/" });
         cookies.set("email", email, { path: "/" });
+        cookies.set("phone", phone, { path: "/" });
         toast.success(message);
         router.push('/cms/home');
       } else {
