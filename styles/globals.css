@@ -85,9 +85,9 @@ body {
   overflow-x: hidden;
 }
 
-body {
+/* body {
  background-image: linear-gradient(to bottom,  rgba(232, 229, 229, 0.925) ,rgb(70, 247, 238), rgb(87, 198, 242)) 
-}
+} */
 
 /* a {
   color: inherit;

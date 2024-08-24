@@ -26,15 +26,22 @@ export default function index() {
     }
     return (
         <>
-            {/* <div style={{
+            <div style={{
                 width: "100%", height: "450px",
-                backgroundColor:"skyblue"
-            }}> */}
+                backgroundImage:"url('/Images/240_F_645689490_Fzwptjq0YLCW8JZpC6lASo1KJcAgzZPj.jpg')",
+                backgroundSize:"cover",
+            
+            }}>
                 <Container >
                     <br /> <br />
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6} sx={{ margin: "0 auto" }}>
-                            <Paper elevation={3} sx={{ padding: 2 }}>
+                            <Paper elevation={3} sx={{ padding: 2 ,
+        backgroundColor: 'rgba(255, 255, 255, 0.7)', // Semi-transparent white background
+         backdropFilter: 'blur(5px)', // Optional: Adds a blur effect to the background
+        padding: '20px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)'}}>
                                 <Typography variant="h5" gutterBottom>
                                     Submit
                                 </Typography>
@@ -69,8 +76,7 @@ export default function index() {
                     </Grid>
                     <br /> <br />
                 </Container>
-            {/* </div> */}
-            <br /> <br />
+            </div>
         </>
     )
 }

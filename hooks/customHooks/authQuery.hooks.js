@@ -35,16 +35,19 @@ export const useSignInMutation = () => {
         cookies.set("phone", phone, { path: "/" });
         toast.success(message);
         router.push('/cms/home');
-      } else {
-        toast.error(message);
+      } 
+      else {
+toast.error(message);
       }
+    
+    if(status===400)
+        {toast.error(message || "Unexptected error occured while login");}
+  
 
       queryClient.invalidateQueries(["USERS"]);
     },
     onError: (error) => {
-      const errorMessage = error?.response?.data?.message || "An error occurred";
-      toast.error(errorMessage);
-      console.error(error);
+      toast.error("invalid credentials");
     },
   });
 }

@@ -9,7 +9,32 @@ const Footer = () => {
             
             <Box sx={{ bgcolor: 'darkblue', color:"whitesmoke", p: 6}} component="footer">
             <Container maxWidth="lg">
+             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexGrow: 1 }}> 
+         <Box
+         component="img"
+    src="/Images/4228730.png"
+    alt="Medical Icon"
+    sx={{ display: {  md: 'flex'}, width: "30px", height: "30px", padding: 0  }}
+  />
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: 'monospace',
+            fontWeight: 700,
+            letterSpacing: '.3rem',
+            color: 'inherit',
+            textDecoration: 'none',
+            textAlign: 'left', 
+          }}
+        >
+          Medinest
+        </Typography>
+      </Box>
+    
+       <br />
                 <Grid container spacing={4} justifyContent="space-between">
+        
+
                     <Grid item xs={12} sm={6} md={3}>
                         <Typography variant="h6" color="skyblue" gutterBottom>
                             SITE LINKS
