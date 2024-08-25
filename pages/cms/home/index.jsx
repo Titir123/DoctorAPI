@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { use } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 // import styles from "../../../styles/Home.module.css";
@@ -15,6 +15,9 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useAOS } from "@/hooks/customHooks/cmsQuery.hooks";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +34,7 @@ export default function Home() {
     cssEase:"Linear",
   };
 
-  
+  useAOS();
   return (
     <>
          <div className={styles.banner_container}>
@@ -91,7 +94,7 @@ export default function Home() {
    
     </Container>
 <br /> <br /><br />
-   <Box sx={{backgroundImage:"url('/Images/senior-male-doctor-working-hospital-260nw-1385163833.webp')",
+   <Box data-aos="fade-in" data-aos-duration="3000" sx={{backgroundImage:"url('/Images/senior-male-doctor-working-hospital-260nw-1385163833.webp')",
    display:"flex",
    alignItems:"center",
    flexDirection:"column",
@@ -113,7 +116,7 @@ export default function Home() {
    </Box>
 
 
-<Box sx={{backgroundImage:"linear-gradient(to right, slategrey, skyblue)",
+<Box data-aos="flip-left" sx={{backgroundImage:"linear-gradient(to right, slategrey, skyblue)",
    display:"flex",
    alignItems:"center",
    flexDirection:"column",
@@ -134,7 +137,7 @@ export default function Home() {
    </Box>
    
 
-   <Box sx={{backgroundImage:"url('/Images/istockphoto-1210031774-612x612.jpg')",
+   <Box data-aos="zoom-in"  sx={{backgroundImage:"url('/Images/istockphoto-1210031774-612x612.jpg')",
    display:"flex",
    alignItems:"center",
    flexDirection:"column",
