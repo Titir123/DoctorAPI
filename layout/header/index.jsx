@@ -18,7 +18,7 @@ import Image from 'next/image';
 import LogoutIcon from '@mui/icons-material/Logout';
 import img from '../../public/Images/download.png'
 
-const pages = ['Home', 'About', 'Blog', 'Contact'];
+const pages = ['HOME', 'ABOUT','DEPARTMENT', 'BLOG', 'CONTACT'];
 // const settings = ['Register'];
 
 export default function Header() {

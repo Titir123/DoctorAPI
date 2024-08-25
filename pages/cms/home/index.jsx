@@ -90,10 +90,70 @@ export default function Home() {
       
    
     </Container>
+<br /> <br /><br />
+   <Box sx={{backgroundImage:"url('/Images/senior-male-doctor-working-hospital-260nw-1385163833.webp')",
+   display:"flex",
+   alignItems:"center",
+   flexDirection:"column",
+   justifyContent:"center",
+   opcaity:"80%",
+    backgroundSize:"cover",
+    width:"100%",
+    height:"400px"
+   }}>
+   <Typography variant="h4" gutterBottom sx={{fontSize:"40px",fontFamily:"fantasy", color:"darkblue"}}>
+         Explore the departments 
+        </Typography>
+        <Container><Typography variant="h6" gutterBottom sx={{fontSize:"15px",fontFamily:"fantasy"}}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+        </Typography></Container>
+        <Link href={'/cms/department'}><Button sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
+          Visit 
+        </Button></Link>
+   </Box>
 
-   <Department/>
 
-   <Doctorlist/>
+<Box sx={{backgroundImage:"linear-gradient(to right, slategrey, skyblue)",
+   display:"flex",
+   alignItems:"center",
+   flexDirection:"column",
+   justifyContent:"center",
+   opcaity:"80%",
+    width:"100%",
+    height:"400px"
+   }}>
+   <Typography variant="h4" gutterBottom sx={{fontSize:"40px",fontFamily:"fantasy", color:"darkblue"}}>
+         Meet our team members 
+        </Typography>
+        <Container><Typography variant="h6" gutterBottom sx={{fontSize:"15px",fontFamily:"fantasy"}}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+        </Typography></Container>
+        <Link href={'/cms/doctorlist'}><Button sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
+          Visit doctors
+        </Button></Link>
+   </Box>
+   
+
+   <Box sx={{backgroundImage:"url('/Images/istockphoto-1210031774-612x612.jpg')",
+   display:"flex",
+   alignItems:"center",
+   flexDirection:"column",
+   justifyContent:"center",
+   opcaity:"80%",
+    backgroundSize:"cover",
+    width:"100%",
+    height:"400px"
+   }}>
+   <Typography variant="h4" gutterBottom sx={{fontSize:"40px",fontFamily:"fantasy", color:"darkblue"}}>
+         BLOGS
+        </Typography>
+        <Container><Typography variant="h6" gutterBottom sx={{fontSize:"15px",fontFamily:"fantasy"}}>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+        </Typography></Container>
+        <Link href={'/cms/blog'}><Button sx={{borderColor:"blue", borderRadius:"20px", color:"blue"}} variant="outlined">
+          Explore
+        </Button></Link>
+   </Box>
 
     </>
   );
