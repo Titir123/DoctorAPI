@@ -147,8 +147,8 @@ export const getChildcareDoctors = () => {
     queryFn: () => Childcare(),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["childcare"] })
-    },
-    staleTime: 3000,
+    a},
+staleTime: 3000,
     cacheTime: 6000,
   });
 };
